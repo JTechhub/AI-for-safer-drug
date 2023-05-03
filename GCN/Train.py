@@ -28,7 +28,7 @@ N_FEATURES = 256
 if not os.path.exists(SAVE_DIR):
     os.mkdir(SAVE_DIR)
 
-# set model
+# Set model
 from GCN import GCNModel
 from Dataset import GCN_data_loaders
 model = GCNModel(n_feature=N_FEATURES, num_conv_layers=N_LAYERS)
@@ -84,6 +84,6 @@ for i in range(1, NUM_EPOCH + 1):
             best_epoch = i
             best_loss = valid_avg_rmse
 
-    print(f"\t{i}th EPOCH --- TRAIN RMSE: {train_avg_rmse:.3f} || TRAIN RMSE: {valid_avg_rmse:.3f} || BEST EPOCH: {best_epoch}", flush=True)
+    print(f"\t{i}th EPOCH --- TRAIN RMSE: {train_avg_rmse:.3f} || VALID RMSE: {valid_avg_rmse:.3f} || BEST EPOCH: {best_epoch}", flush=True)
 
     torch.save(model.state_dict(), os.path.join(SAVE_DIR, f"save_{i}.pt"))
