@@ -9,6 +9,7 @@ Created on Wed May 3 2023
 import torch
 import config
 import numpy as np
+from functools import reduce
 from rdkit import Chem
 from rdkit.Chem import AllChem
 
