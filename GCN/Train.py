@@ -85,5 +85,6 @@ for i in range(1, NUM_EPOCH + 1):
             best_loss = valid_avg_rmse
 
     print(f"\t{i}th EPOCH --- TRAIN RMSE: {train_avg_rmse:.3f} || VALID RMSE: {valid_avg_rmse:.3f} || BEST EPOCH: {best_epoch}", flush=True)
-
+    
+    # Save the model
     torch.save(model.state_dict(), os.path.join(SAVE_DIR, f"save_{i}.pt"))
