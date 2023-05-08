@@ -32,65 +32,9 @@ train_loader = DataLoader(train, batch_size = batch_size, shuffle = True)
 valid_loader = DataLoader(valid, batch_size = batch_size, shuffle = False)
 test_loader = DataLoader(test, batch_size = batch_size, shuffle = False)
 
-# dataset = QM9('data/')
-
-# pretrain_loader = DataLoader(dataset[:120000], batch_size = 256, shuffle = True)
-# prevalid_loader = DataLoader(dataset[120000:], batch_size = 256)
-
-# pretrain_model = gnn_model().to(device)
-
-# criterion = nn.MSELoss()
-# optimizer = torch.optim.Adam(pretrain_model.parameters(), lr=1e-3)
-# scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=10, eta_min=1e-9)
-
-# best_loss = 10e10000000
-# train_history = []
-# val_history = []
-# for epoch in tqdm(range(300)):
-    
-#     train_loss = 0
-#     val_loss = 0
-
-#     pretrain_model.train()
-#     for data in pretrain_loader:
-#         data = data.to(device)
-#         pred = pretrain_model(data, is_pretrain = True)
-#         loss = torch.sqrt(criterion(pred, data.y[:,:1]))
-#         train_loss+=loss.item()
-
-#         optimizer.zero_grad()
-#         loss.backward()
-#         optimizer.step()
-    
-#     # scheduler.step()
-
-#     pretrain_model.eval()
-#     for data in prevalid_loader:
-#         data = data.to(device)
-#         pred = pretrain_model(data, is_pretrain = True)
-#         loss = torch.sqrt(criterion(pred, data.y[:,:1]))
-
-#         val_loss+=loss.item()
-
-    
-
-#     train_loss = train_loss/len(train_loader)
-#     val_loss = val_loss/len(valid_loader)
-
-#     if val_loss < best_loss:
-#         torch.save(pretrain_model.state_dict(), 'model/best_pretrain.pt')
-#         best_loss = val_loss
-
-#     train_history.append(train_loss)
-#     val_history.append(val_loss)
-
-#     print(f"Epoch {epoch+1} / train loss : {train_loss:.4f}, valid loss : {val_loss:.4f}")
-
-# del pretrain_model, loss
 
 main_model = gnn_model().to(device)
 
-# main_model.load_state_dict(torch.load('model/best_pretrain.pt'))
 
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(main_model.parameters(), lr=1e-3)
@@ -170,4 +114,4 @@ data = {'rmse' : [rmse],
 
 df = pd.DataFrame(data)
 
-df.to_csv("gnn_result.csv")
+df.to_csv("gnn_results/gnn_result.csv")
