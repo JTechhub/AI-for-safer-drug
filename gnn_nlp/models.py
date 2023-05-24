@@ -9,7 +9,7 @@ class gnn_model(nn.Module):
         self.dime = DimeNetPlusPlus(hidden_channels=128, out_channels=16, num_blocks=4, int_emb_size=64,
                       basis_emb_size=8, out_emb_channels=256, num_spherical=7, num_radial=6)
         self.lr = nn.LeakyReLU()
-        self.drop = nn.Dropout(p=0.5)
+        self.drop = nn.Dropout(p=0.3)
         
         self.linear = nn.Linear(16,1)
 
