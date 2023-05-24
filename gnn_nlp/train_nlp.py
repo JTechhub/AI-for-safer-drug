@@ -21,8 +21,8 @@ tokenizer = AutoTokenizer.from_pretrained("seyonec/PubChem10M_SMILES_BPE_450k")
 
 roberta = AutoModelForMaskedLM.from_pretrained("seyonec/PubChem10M_SMILES_BPE_450k")
 
-train = torch.load('data/train_graph_add_del_h')
-test = torch.load('data/test_graph_add_del_h')
+train = torch.load('data/train_graph')
+test = torch.load('data/test_graph')
 
 random.shuffle(train)
 train, valid = train[:6000], train[6000:]
