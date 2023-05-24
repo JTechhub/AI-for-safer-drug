@@ -21,8 +21,8 @@ import matplotlib.pyplot as plt
 
 set_seed(17)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-train = torch.load('data/train_graph')
-test = torch.load('data/test_graph')
+train = torch.load('data/train_graph_add_del_h')
+test = torch.load('data/test_graph_add_del_h')
 
 random.shuffle(train)
 train, valid = train[:6000], train[6000:]
@@ -32,9 +32,7 @@ train_loader = DataLoader(train, batch_size = batch_size, shuffle = True)
 valid_loader = DataLoader(valid, batch_size = batch_size, shuffle = False)
 test_loader = DataLoader(test, batch_size = batch_size, shuffle = False)
 
-
 main_model = gnn_model().to(device)
-
 
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(main_model.parameters(), lr=1e-3)
@@ -59,7 +57,7 @@ for epoch in tqdm(range(300)):
         loss.backward()
         optimizer.step()
     
-    # scheduler.step()
+    scheduler.step()
 
     main_model.eval()
     for data in valid_loader:
@@ -89,6 +87,7 @@ rmse = 0
 r2 = 0
 mae = 0
 sp_r = 0
+
 best_model = gnn_model().to(device)
 best_model.load_state_dict(torch.load('model/best_gnn_model.pt'))
 best_model.eval()
@@ -114,4 +113,4 @@ data = {'rmse' : [rmse],
 
 df = pd.DataFrame(data)
 
-df.to_csv("gnn_results/gnn_result.csv")
+df.to_csv("gnn_result/gnn_result.csv")

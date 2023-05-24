@@ -1,5 +1,4 @@
-from transformers import AutoTokenizer, AutoModelForMaskedLM
-import torch_geometric
+from transformers import AutoTokenizer
 from torch_geometric import data
 import os.path as osp
 
@@ -10,6 +9,7 @@ import numpy as np
 import random
 from tqdm import tqdm
 import copy
+from models import nlp_model
 
 from torchmetrics.functional import r2_score
 from torchmetrics.functional import mean_absolute_error
@@ -19,10 +19,8 @@ from torchmetrics.functional import spearman_corrcoef
 # load pretrained model
 tokenizer = AutoTokenizer.from_pretrained("seyonec/PubChem10M_SMILES_BPE_450k")
 
-roberta = AutoModelForMaskedLM.from_pretrained("seyonec/PubChem10M_SMILES_BPE_450k")
-
-train = torch.load('data/train_graph')
-test = torch.load('data/test_graph')
+train = torch.load('data/train_graph_add_del_h')
+test = torch.load('data/test_graph_add_del_h')
 
 random.shuffle(train)
 train, valid = train[:6000], train[6000:]
@@ -69,44 +67,14 @@ train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size,
 valid_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=batch_size)
 test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size)
 
-class nlp_model(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.roberta = roberta
-
-        self.lr = nn.LeakyReLU()
-        self.drop = nn.Dropout(p=0.2)
-
-        self.linear1 = nn.Linear(52000,1024)
-        self.linear2 = nn.Linear(1024,64)
-        self.linear3 = nn.Linear(64,1)
-
-        self.b1 = nn.BatchNorm1d(1024)
-        self.b2 = nn.BatchNorm1d(64)
-
-    def forward(self, d0, d1):
-        x = self.roberta(d0,d1)
-        x = x.logits[:,0,:]
-
-        x = self.linear1(x)
-        x = self.b1(x)
-        x = self.lr(x)
-        x = self.drop(x)
-        x = self.linear2(x)
-        x = self.b2(x)
-        x = self.lr(x)
-        x = self.drop(x)
-        x = self.linear3(x)
-        return x
-
 model = nlp_model().to(device)
 
 criterion = nn.MSELoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-2)
 scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=10, eta_min=0)
 
 best_loss = 10e100000
-for epoch in tqdm(range(300)):
+for epoch in tqdm(range(200)):
     train_history = []
     val_history = []
     train_loss = 0
@@ -125,7 +93,7 @@ for epoch in tqdm(range(300)):
         loss.backward()
         optimizer.step()
     
-    # scheduler.step()
+    scheduler.step()
 
     model.eval()
     for data in valid_loader:
@@ -179,4 +147,4 @@ data = {'rmse' : [rmse],
 
 df = pd.DataFrame(data)
 
-df.to_csv("nlp_result.csv")
+df.to_csv("nlp_results/nlp_result.csv")
