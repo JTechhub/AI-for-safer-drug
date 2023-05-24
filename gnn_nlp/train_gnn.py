@@ -21,8 +21,8 @@ import matplotlib.pyplot as plt
 
 set_seed(17)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-train = torch.load('data/train_graph_add_del_h')
-test = torch.load('data/test_graph_add_del_h')
+train = torch.load('data/train_graph')
+test = torch.load('data/test_graph')
 
 random.shuffle(train)
 train, valid = train[:6000], train[6000:]
