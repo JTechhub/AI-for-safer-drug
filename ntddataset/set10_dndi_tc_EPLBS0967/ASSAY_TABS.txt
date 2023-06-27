@@ -1,0 +1,64 @@
+ASSAY_ID	REFERENCE_ID	ASSAY_DESCRIPTION	ASSAY_TYPE	ASSAY_TEST_TYPE	ASSAY_ORGANISM	ASSAY_STRAIN	ASSAY_TAX_ID	ASSAY_TISSUE	ASSAY_CELL_LINE	ASSAY_SUBCELLULAR_FRACTION	TARGET_TYPE	TARGET_NAME	TARGET_ACCESSION	TARGET_ORGANISM	TARGET_TAX_ID	SRC_ID	ASSAY_SOURCE
+1035348	1	Chagas in Vitro	F	In Vitro	T. cruzi	Tulahuen C4 (LacZ)					ORGANISM	T. cruzi				14	HEOS
+1327100	1	Chagas in Vitro	F	In Vitro	T. cruzi	Tulahuen C4 (LacZ)					ORGANISM	T. cruzi				14	HEOS
+1331134	1	Chagas in vivo at 10 mg/kg, 20 adm days	F	In Vivo	T. cruzi	Tulahuen Swiss po					ORGANISM	T. cruzi				14	HEOS
+1331149	1	Chagas in vivo at 100 mg/kg, 20 adm days	F	In Vivo	T. cruzi	Tulahuen Swiss po					ORGANISM	T. cruzi				14	HEOS
+1331117	1	Chagas in vivo at 20 mg/kg, 10 adm days	F	In Vivo	T. cruzi	Tulahuen Swiss po					ORGANISM	T. cruzi				14	HEOS
+1331121	1	Chagas in vivo at 20 mg/kg, 20 adm days	F	In Vivo	T. cruzi	Tulahuen Swiss po					ORGANISM	T. cruzi				14	HEOS
+1331118	1	Chagas in vivo at 20 mg/kg, 5 adm days	F	In Vivo	T. cruzi	Tulahuen Swiss po					ORGANISM	T. cruzi				14	HEOS
+1331133	1	Chagas in vivo at 5 mg/kg, 20 adm days	F	In Vivo	T. cruzi	Tulahuen Swiss po					ORGANISM	T. cruzi				14	HEOS
+1331137	1	Chagas in vivo at 50 mg/kg, 20 adm days	F	In Vivo	T. cruzi	Tulahuen Swiss po					ORGANISM	T. cruzi				14	HEOS
+1008058	1	CYP Inhibition	A	In Vitro	CYP1A2	unknown					ORGANISM	CYP1A2				14	HEOS
+1008059	1	CYP Inhibition	A	In Vitro	CYP2C19	unknown					ORGANISM	CYP2C19				14	HEOS
+1008055	1	CYP Inhibition	A	In Vitro	CYP2C9	unknown					ORGANISM	CYP2C9				14	HEOS
+1008056	1	CYP Inhibition	A	In Vitro	CYP2D6	unknown					ORGANISM	CYP2D6				14	HEOS
+1008020	1	CYP Inhibition	F	In Vitro	CYP3A4	midazolam					ORGANISM	CYP3A4				14	HEOS
+1034081	1	CYP Inhibition	A	In Vitro	CYP3A4	midazolam					ORGANISM	CYP3A4				14	HEOS
+1042700	1	CYP Inhibition	A	In Vitro	CYP3A4	Nifedipine					ORGANISM	CYP3A4				14	HEOS
+1042922	1	CYP Inhibition	A	In Vitro	CYP3A4	terfenadine					ORGANISM	CYP3A4				14	HEOS
+1034082	1	CYP Inhibition	A	In Vitro	CYP3A4	testosterone					ORGANISM	CYP3A4				14	HEOS
+1008057	1	CYP Inhibition	A	In Vitro	CYP3A4	unknown					ORGANISM	CYP3A4				14	HEOS
+1327097	1	Cytotoxicity in Vitro	F	In Vitro	L-6 cells	Rat Skeletal Myoblast Cells					ORGANISM	L-6 cells				14	HEOS
+1327661	1	HAT in Vitro	F	In Vitro	T.b. rhodesiense	ATCC 30027					ORGANISM	T.b. rhodesiense				14	HEOS
+1038090	1	Leish macro in vitro at 10 uM	F	In Vitro	L. donovani	MHOM/ET/67/L82					ORGANISM	L. donovani				14	HEOS
+1038564	1	Lipophilicity	A	In Vitro	eLogD	pH 5					ORGANISM	eLogD				14	HEOS
+1000251	1	Lipophilicity	A	In Vitro	eLogD	pH 7.4					ORGANISM	eLogD				14	HEOS
+1007988	1	Lipophilicity	A	In Vitro	gLogD	pH 3					ORGANISM	gLogD				14	HEOS
+1007176	1	Lipophilicity	A	In Vitro	gLogD	pH 3.0					ORGANISM	gLogD				14	HEOS
+1007173	1	Lipophilicity	A	In Vitro	gLogD	pH 7.4					ORGANISM	gLogD				14	HEOS
+1038563	1	Lipophilicity	A	In Vitro	Water	unknown					ORGANISM	Water				14	HEOS
+1035991	1	Metabolism	A	In Vitro	Dog	Microsomes					ORGANISM	Dog				14	HEOS
+1035992	1	Metabolism	A	In Vitro	Dog	Microsomes					ORGANISM	Dog				14	HEOS
+1034011	1	Metabolism	A	In Vitro	Dog	Microsomes					ORGANISM	Dog				14	HEOS
+1000252	1	Metabolism	A	In Vitro	Human	Microsomes					ORGANISM	Human				14	HEOS
+1007804	1	Metabolism	A	In Vitro	Human	Microsomes					ORGANISM	Human				14	HEOS
+1007806	1	Metabolism	A	In Vitro	Human	Microsomes					ORGANISM	Human				14	HEOS
+1041455	1	Metabolism	A	In Vitro	Met ID	unknown					ORGANISM	Met ID				14	HEOS
+1007805	1	Metabolism	A	In Vitro	Mouse	Microsomes					ORGANISM	Mouse				14	HEOS
+1007808	1	Metabolism	A	In Vitro	Mouse	Microsomes					ORGANISM	Mouse				14	HEOS
+1007807	1	Metabolism	A	In Vitro	Mouse	Microsomes					ORGANISM	Mouse				14	HEOS
+1007990	1	Metabolism	A	In Vitro	Rat	Microsomes					ORGANISM	Rat				14	HEOS
+1007989	1	Metabolism	A	In Vitro	Rat	Microsomes					ORGANISM	Rat				14	HEOS
+1000253	1	Metabolism	A	In Vitro	Rat	Microsomes					ORGANISM	Rat				14	HEOS
+1007985	1	pKa measurement	A	In Vitro	PKA	unknown					ORGANISM	PKA				14	HEOS
+1043025	1	protein binding	A	In Vitro	10% serum RPMI	media					ORGANISM	10% serum RPMI				14	HEOS
+1041453	1	protein binding	A	In Vitro	dog	plasma					ORGANISM	dog				14	HEOS
+1041454	1	protein binding	A	In Vitro	Human	Liver Microsomes					ORGANISM	Human				14	HEOS
+1006670	1	protein binding	A	In Vitro	human	plasma					ORGANISM	human				14	HEOS
+1008045	1	protein binding	A	In Vitro	mouse	plasma					ORGANISM	mouse				14	HEOS
+1038452	1	protein binding	A	In Vitro	rat	plasma					ORGANISM	rat				14	HEOS
+1007175	1	Solubility	A	In Vitro	0.01M HCl - pH 2	NEPH_RT					ORGANISM	0.01M HCl - pH 2				14	HEOS
+1007599	1	Solubility	A	In Vitro	PBS - pH 6.5	NEPH_RT					ORGANISM	PBS - pH 6.5				14	HEOS
+1007174	1	Solubility	A	In Vitro	Phosphate Buffer - pH 6.5	NEPH_RT					ORGANISM	Phosphate Buffer - pH 6.5				14	HEOS
+1038568	1	Solubility, 24 hour	A	In Vitro	20 mM Citrate - pH 3	37oC					ORGANISM	20 mM Citrate - pH 3				14	HEOS
+1038569	1	Solubility, 24 hour	A	In Vitro	50 mM Phosphate - pH 2	37oC					ORGANISM	50 mM Phosphate - pH 2				14	HEOS
+1038570	1	Solubility, 24 hour	A	In Vitro	50 mM phosphate - pH 7.4	37oC					ORGANISM	50 mM phosphate - pH 7.4				14	HEOS
+1038566	1	Solubility, 24 hour	A	In Vitro	FaSSIF	37oC					ORGANISM	FaSSIF				14	HEOS
+1038567	1	Solubility, 24 hour	A	In Vitro	FeSSIF	37oC					ORGANISM	FeSSIF				14	HEOS
+1038565	1	Solubility, 24 hour	A	In Vitro	SGF	37oC					ORGANISM	SGF				14	HEOS
+1038459	1	Stability, 4 hour	A	In Vitro	Blood	Dog					ORGANISM	Blood				14	HEOS
+1035699	1	Stability, 4 hour	A	In Vitro	Blood	human					ORGANISM	Blood				14	HEOS
+1037109	1	Stability, 4 hour	A	In Vitro	Blood	rat					ORGANISM	Blood				14	HEOS
+1038460	1	Stability, 4 hour	A	In Vitro	Plasma	Dog					ORGANISM	Plasma				14	HEOS
+1035700	1	Stability, 4 hour	A	In Vitro	Plasma	human					ORGANISM	Plasma				14	HEOS
+1037110	1	Stability, 4 hour	A	In Vitro	Plasma	rat					ORGANISM	Plasma				14	HEOS

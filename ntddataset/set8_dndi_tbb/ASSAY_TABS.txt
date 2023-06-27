@@ -1,0 +1,9 @@
+ASSAY_ID	REFERENCE_ID	ASSAY_DESCRIPTION	ASSAY_TYPE	ASSAY_TEST_TYPE	ASSAY_ORGANISM	ASSAY_STRAIN	ASSAY_TAX_ID	ASSAY_TISSUE	ASSAY_CELL_LINE	ASSAY_SUBCELLULAR_FRACTION	TARGET_TYPE	TARGET_NAME	TARGET_ACCESSION	TARGET_ORGANISM	TARGET_TAX_ID	SRC_ID	ASSAY_SOURCE
+1035348	1	Chagas in vitro	F	In Vitro	T. cruzi	Tulahuen C4 (LacZ)					ORGANISM	T. cruzi				14	HEOS
+1037502	1	CYTOTOXICITY	F	In Vitro	L-6 cells	myoblast					ORGANISM	L-6 cells				14	HEOS
+1002458	1	CYTOTOXICITY	F	In Vitro	MRC-5 cells	human lung fibroblasts					ORGANISM	MRC-5 cells				14	HEOS
+1007605	1	HAT in vitro	F	In Vitro	T.b. brucei	STIB 795					ORGANISM	T.b. brucei				14	HEOS
+1007998	1	HAT in vitro	F	In Vitro	T.b. brucei	STIB 795					ORGANISM	T.b. brucei				14	HEOS
+1000026	1	HAT in vitro	F	In Vitro	T.b. rhodesiense	STIB 900					ORGANISM	T.b. rhodesiense				14	HEOS
+1000032	1	Leish axenic in vitro	F	In Vitro	L. donovani	MHOM/ET/67/L82					ORGANISM	L. donovani				14	HEOS
+1000016	1	Malaria in vitro	F	In Vitro	P. falciparum	K1					ORGANISM	P. falciparum				14	HEOS
