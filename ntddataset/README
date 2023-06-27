@@ -1,0 +1,25 @@
+***************************************************************************
+*
+* Title:        ChEMBLNTD FTP Directory 
+* 
+* Date:         18/11/2011
+*
+***************************************************************************
+
+
+Contents of this directory:
+---------------------------
+
+README                  This file
+
+set1_gsk                GSK TCAMS Dataset (20th May 2010)
+
+set2_gnf                Novartis GNF-Pf Whole Cell Dataset (20th May 2010)
+
+set3_stjudes            St. Jude Children's Research Hospital Dataset (20th May 2010)
+ 
+set4_gnf_liver          Novartis GNF-Py Liver Stage Dataset (18th November 2011) 
+
+set5_dndi_hat           DNDi HAT Dataset (18th November 2011)
+
+set6_dndi_chagas        DNDi Chagas Dataset (18th November 2011)
