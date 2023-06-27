@@ -1,0 +1,18 @@
+AIDX	TYPE	RELATION	VALUE	UNITS	TEXT_VALUE	COMMENTS
+1	TEST_CONCENTRATION	=	50	uM		
+1	TEMPERATURE	=	37	degree C		
+1	Phentype/Motility score below cut off values				Active	
+1	Phentype/Motility score above cut off values				Inactive	
+1	TIME_INCUBATION	=	72	h		
+2	TEST_CONCENTRATION	=	10	uM		
+2	TEMPERATURE	=	37	degree C		
+2	Phentype/Motility score below cut off values				Active	
+2	Phentype/Motility score above cut off values				Inactive	
+2	TIME_INCUBATION	=	72	h		
+3	TEST_CONCENTRATION	=	10	uM		
+3	TEMPERATURE	=	37	degree C		
+3	TIME_INCUBATION	=	72	h		
+4	TEST_CONCENTRATION	=	10	uM		
+4	TEMPERATURE	=	37	degree C		
+4	Worm movement inhibition (compared to DMSO control)_upper value	=	100	%		
+4	Worm movement inhibition (compared to DMSO control)_lower value	=	0	%		
