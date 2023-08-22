@@ -58,7 +58,7 @@ list_to_remove.clear()
 
 for index, row in df.iterrows():    
     compoundId = row['COMPOUND_ID']
-    essayId = row['ASSAY_ID']
+    assayId = row['ASSAY_ID']
             
     # relation check
     if row['STATUS'] != '=':
@@ -78,7 +78,7 @@ for index, row in df.iterrows():
         df.loc[index, 'smiles']= compound.iloc[0,3]
         
     # essay id 로  실험 정보 조회 
-    assay = info.loc[info['ASSAY_ID'] == essayId]
+    assay = info.loc[info['ASSAY_ID'] == assayId]
     
     if assay is None:
         print ("no assay",index,assayId)
