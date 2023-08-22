@@ -10,10 +10,11 @@ import numpy as np
 
 originalfile = './Identification_of_Selective_Inhibitors_of_PfHT.sdf'
 newfile = 'dataset13.sdf'
-datafile = open(newfile,'w')
+datafile = open(newfile,'wb')
 
-with open(originalfile,'r',errors='replace') as f:
-  text = f.read()  
+with open(originalfile,'rb') as f:
+  text = f.read() 
+  text = text.replace(b'\x94',b'\x60')   
   datafile.write(text)
   f.close()
   datafile.close()
