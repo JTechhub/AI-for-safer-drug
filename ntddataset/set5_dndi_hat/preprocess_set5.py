@@ -77,7 +77,7 @@ for index, row in df.iterrows():
         df.loc[index, 'salt']= compound.iloc[0,5]
         df.loc[index, 'smiles']= compound.iloc[0,3]
         
-    # essay id 로  실험 정보 조회 
+    # assay id 로  실험 정보 조회 
     assay = info.loc[info['ASSAY_ID'] == assayId]
     
     if assay is None:
