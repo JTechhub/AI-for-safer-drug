@@ -113,19 +113,4 @@ df['model type'] = ''
 df = df[[     'smiles',      'active ingredient','salt','STATUS', 'VALUE',      'TARGET_NAME',    'protein target','treatment concentration','UNIT','exposure time (h)',  'MEASUREMENT_TYPE', 'type','model type','ASSAY_DESCRIPTION', 'dataset','ASSAY_TYPE','ASSAY_STRAIN','TARGET_TYPE','DOSE','timepoint_unit','SUPPLIER','ASSAY_SOP','New ASSAY_SOP','Comment']]
 df.columns = ['smiles code', 'active ingredient','salt','relation','assay value','target disease', 'protein target','treatment concentration','treatment unit','exposure time (h)','measurement','type','model type','description' ,'dataset','ASSAY_TYPE','ASSAY_STRAIN','TARGET_TYPE','DOSE','timepoint_unit','SUPPLIER','ASSAY_SOP','New ASSAY_SOP','Comment']
 
-
-df.to_excel('dataset5.xlsx', # directory and file name to write
-            sheet_name = 'Sheet1', 
-            na_rep = '', 
-            float_format = "%.2f", 
-            header = True, 
-            #columns = ["group", "value_1", "value_2"], # if header is False
-            index = False, 
-            #index_label = "id", 
-            startrow = 0, 
-            startcol = 0, 
-            #engine = 'xlsxwriter', 
-            #freeze_panes = (2, 0)
-            ) 
-
-
+df.to_csv('set5_result.csv', index=False)
